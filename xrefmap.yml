@@ -1,0 +1,27 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: LaunchDarkly.Logging
+  name: LaunchDarkly.Logging
+  href: api/LaunchDarkly.Logging.html
+  commentId: N:LaunchDarkly.Logging
+  fullName: LaunchDarkly.Logging
+  nameWithType: LaunchDarkly.Logging
+- uid: LaunchDarkly.Logging.LdMicrosoftLogging
+  name: LdMicrosoftLogging
+  href: api/LaunchDarkly.Logging.LdMicrosoftLogging.html
+  commentId: T:LaunchDarkly.Logging.LdMicrosoftLogging
+  fullName: LaunchDarkly.Logging.LdMicrosoftLogging
+  nameWithType: LdMicrosoftLogging
+- uid: LaunchDarkly.Logging.LdMicrosoftLogging.Adapter(Microsoft.Extensions.Logging.ILoggerFactory)
+  name: Adapter(ILoggerFactory)
+  href: api/LaunchDarkly.Logging.LdMicrosoftLogging.html#LaunchDarkly_Logging_LdMicrosoftLogging_Adapter_Microsoft_Extensions_Logging_ILoggerFactory_
+  commentId: M:LaunchDarkly.Logging.LdMicrosoftLogging.Adapter(Microsoft.Extensions.Logging.ILoggerFactory)
+  fullName: LaunchDarkly.Logging.LdMicrosoftLogging.Adapter(Microsoft.Extensions.Logging.ILoggerFactory)
+  nameWithType: LdMicrosoftLogging.Adapter(ILoggerFactory)
+- uid: LaunchDarkly.Logging.LdMicrosoftLogging.Adapter*
+  name: Adapter
+  href: api/LaunchDarkly.Logging.LdMicrosoftLogging.html#LaunchDarkly_Logging_LdMicrosoftLogging_Adapter_
+  commentId: Overload:LaunchDarkly.Logging.LdMicrosoftLogging.Adapter
+  fullName: LaunchDarkly.Logging.LdMicrosoftLogging.Adapter
+  nameWithType: LdMicrosoftLogging.Adapter
