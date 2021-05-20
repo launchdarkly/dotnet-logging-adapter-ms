@@ -12,14 +12,14 @@ For more information and examples, see the [API documentation](https://launchdar
 
 ## Supported .NET versions
 
-The 1.x version of the package, which references `Microsoft.Extensions.Logging` version 3.x, is built for two target frameworks (the only ones where `Microsoft.Extensions.Logging` 3.x is available):
+The 2.x version of the package, which references `Microsoft.Extensions.Logging` version 5.x, is built for two target frameworks:
 
-* .NET Core 3.1: runs in .NET Core 3.1 and above, or in .NET 5.0 and above.
-* .NET Standard 2.0: runs in .NET Core 2.x, or in .NET Framework 4.6.1 and above, or in library code that is targeted to .NET Standard 2.x.
+* .NET Standard 2.1: runs in .NET Core 3.1 and above, or in .NET 5.0 and above, or in library code that is targeted to .NET Standard 2.1 and above.
+* .NET Standard 2.0: runs in .NET Core 2.x, or in .NET Framework 4.6.1 and above, or in library code that is targeted to .NET Standard 2.0.
 
 The .NET build tools should automatically load the most appropriate build of the library for whatever platform your application or library is targeted to.
 
-Higher major versions of `LaunchDarkly.Logging.Microsoft` can be used with later versions of `Microsoft.Extensions.Logging`.
+New versions of `LaunchDarkly.Logging.Microsoft` will be released as necessary to support higher versions of `Microsoft.Extensions.Logging` as they become available.
 
 ## Contributing
 
