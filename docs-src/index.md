@@ -2,7 +2,7 @@ This .NET package provides integration from the [`LaunchDarkly.Logging`](https:/
 
 This adapter is published as a separate NuGet package to avoid unwanted dependencies on `Microsoft.Extensions.Logging` in the LaunchDarkly SDKs and in applications that do not use that framework.
 
-The [`LaunchDarkly.Logging`](https://launchdarkly.github.io/dotnet-logging/) also contains a version of this adapter, `Logs.CoreLogging`, which was implemented only in the .NET Core target framework and always uses version 5.x of `Microsoft.Extensions.Logging`. `LaunchDarkly.Logging.Microsoft` is the more broadly compatible version of that.
+The [`LaunchDarkly.Logging`](https://launchdarkly.github.io/dotnet-logging/) package also contains a version of this adapter, `Logs.CoreLogging`, which was implemented only in the .NET Core target framework and always uses version 5.x of `Microsoft.Extensions.Logging`. `LaunchDarkly.Logging.Microsoft` is the more broadly compatible version of that.
 
 ## Usage
 
