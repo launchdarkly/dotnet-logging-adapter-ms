@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TestFramework Condition="'$(TESTFRAMEWORK)' == ''">netcoreapp3.1</TestFramework>
+    <TargetFramework>$(TESTFRAMEWORK)</TargetFramework>
+    <AssemblyName>LaunchDarkly.Logging.Microsoft.Tests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\LaunchDarkly.Logging.Microsoft\LaunchDarkly.Logging.Microsoft.csproj" />
+  </ItemGroup>
+</Project>
