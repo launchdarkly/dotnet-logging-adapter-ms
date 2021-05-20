@@ -40,6 +40,7 @@ jobs:
       - image: <<parameters.docker-image>>
     environment:
       ASPNETCORE_SUPPRESSSTATUSMESSAGES: true
+      BUILDFRAMEWORKS: <<parameters.build-target-framework>>
       TESTFRAMEWORK: <<parameters.test-target-framework>>
     steps:
       - checkout
@@ -48,10 +49,10 @@ jobs:
           command: dotnet restore src/LaunchDarkly.Logging.Microsoft
       - run:
           name: build
-          command: dotnet build src/LaunchDarkly.Logging.Microsoft -f <<parameters.build-target-framework>>
+          command: dotnet build src/LaunchDarkly.Logging.Microsoft
       - run:
           name: run tests
-          command: dotnet test test/LaunchDarkly.Logging.Microsoft/LaunchDarkly.Logging.Microsoft.csproj
+          command: dotnet test test/LaunchDarkly.Logging.Microsoft.Tests
 
   build-test-windows:
     parameters:
@@ -64,6 +65,7 @@ jobs:
       shell: powershell.exe
     environment:
       ASPNETCORE_SUPPRESSSTATUSMESSAGES: true
+      BUILDFRAMEWORKS: <<parameters.build-target-framework>>
       TESTFRAMEWORK: <<parameters.test-target-framework>>
     steps:
       - checkout
@@ -72,7 +74,7 @@ jobs:
           command: dotnet restore src/LaunchDarkly.Logging.Microsoft
       - run:
           name: build
-          command: dotnet build src/LaunchDarkly.Logging.Microsoft -f <<parameters.build-target-framework>>
+          command: dotnet build src/LaunchDarkly.Logging.Microsoft
       - run:
           name: run tests
-          command: dotnet test test/LaunchDarkly.Logging.Microsoft/LaunchDarkly.Logging.Microsoft.csproj
+          command: dotnet test test/LaunchDarkly.Logging.Microsoft.Tests
