@@ -1,14 +1,14 @@
 # LaunchDarkly Logging API for .NET - Microsoft.Extensions.Logging Adapter
 
 [![NuGet](https://img.shields.io/nuget/v/LaunchDarkly.Logging.Microsoft.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.Microsoft/)
-[![CircleCI](https://circleci.com/gh/launchdarkly/dotnet-logging-microsoft.svg?style=shield)](https://circleci.com/gh/launchdarkly/dotnet-logging-microsoft)
-[![Documentation](https://img.shields.io/static/v1?label=GitHub+Pages&message=reference&color=00add8)](https://launchdarkly.github.io/dotnet-logging-microsoft)
+[![CircleCI](https://circleci.com/gh/launchdarkly/dotnet-logging-adapter-ms.svg?style=shield)](https://circleci.com/gh/launchdarkly/dotnet-logging-adapter-ms)
+[![Documentation](https://img.shields.io/static/v1?label=GitHub+Pages&message=reference&color=00add8)](https://launchdarkly.github.io/dotnet-logging-adapter-ms)
 
 ## Overview
 
 This .NET package provides integration from the [`LaunchDarkly.Logging`](https://launchdarkly.github.io/dotnet-logging) API that is used by the LaunchDarkly [.NET SDK](https://github.com/launchdarkly/dotnet-server-sdk), [Xamarin SDK](https://github.com/launchdarkly/xamarin-client-sdk), and other LaunchDarkly libraries, to the Microsoft logging framework [`Microsoft.Extensions.Logging`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging?view=dotnet-plat-ext-5.0).
 
-For more information and examples, see the [API documentation](https://launchdarkly.github.io/dotnet-logging-microsoft).
+For more information and examples, see the [API documentation](https://launchdarkly.github.io/dotnet-logging-adapter-ms).
 
 ## Supported .NET versions
 
@@ -23,7 +23,7 @@ Higher major versions of `LaunchDarkly.Logging.Microsoft` can be used with later
 
 ## Contributing
 
-See [Contributing](https://github.com/launchdarkly/dotnet-logging-microsoft/blob/master/CONTRIBUTING.md).
+See [Contributing](https://github.com/launchdarkly/dotnet-logging-adapter-ms/blob/master/CONTRIBUTING.md).
 
 ## Signing
 
