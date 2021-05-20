@@ -60,7 +60,7 @@ jobs:
       test-target-framework:
         type: string
     executor:
-      name: win/vs2019
+      name: win/default
       shell: powershell.exe
     environment:
       ASPNETCORE_SUPPRESSSTATUSMESSAGES: true
