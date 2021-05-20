@@ -16,3 +16,7 @@ template:
 documentation:
   title: LaunchDarkly Logging API for .NET - Microsoft.Extensions.Logging Adapter
   githubPages: true
+
+releasableBranches:
+  - name: master
+  - name: 1.x
