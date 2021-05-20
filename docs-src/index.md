@@ -6,7 +6,7 @@ The [`LaunchDarkly.Logging`](https://launchdarkly.github.io/dotnet-logging/) als
 
 ## Usage
 
-The **<xref:LaunchDarkly.Logging.LdMicrosoftLogging>** adapter is provided by the NuGet package [**`LaunchDarkly.Logging.Microsoft`**](https://nuget.org/packages/LaunchDarkly.Logging.Microsoft). Version 1.x of the package works with `Microsoft.Extensions.Logging` version 3.x. Higher major versions of the package can be used with later versions of `Microsoft.Extensions.Logging`.
+The **<xref:LaunchDarkly.Logging.LdMicrosoftLogging>** adapter is provided by the NuGet package [**`LaunchDarkly.Logging.Microsoft`**](https://nuget.org/packages/LaunchDarkly.Logging.Microsoft). Version 2.x of the package works with `Microsoft.Extensions.Logging` version 5.x. New versions of `LaunchDarkly.Logging.Microsoft` will be released as necessary to support higher versions of `Microsoft.Extensions.Logging` as they become available.
 
 Like `LaunchDarkly.Logging`, `Microsoft.Extensions.Logging` is a facade that can delegate to various destinations. These are configured with the [`LoggerFactory`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.loggerfactory?view=dotnet-plat-ext-5.0) or by dependency injection mechanisms that provide an `ILoggerFactory`. 
 
