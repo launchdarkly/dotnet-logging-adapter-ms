@@ -15,7 +15,7 @@ For more information and examples, see the [API documentation](https://launchdar
 The 3.x version of the package, which references `Microsoft.Extensions.Logging` version 6.x, is built for two target frameworks:
 
 * .NET Standard 2.1: runs in .NET Core 3.1 and above, or in .NET 5.0 and above, or in library code that is targeted to .NET Standard 2.1 and above.
-* .NET Standard 2.0: runs in .NET Core 2.x, or in .NET Framework 4.6.1 and above, or in library code that is targeted to .NET Standard 2.0.
+* .NET Standard 2.0: runs in .NET Framework 4.6.1 and above, or in library code that is targeted to .NET Standard 2.0.
 
 The .NET build tools should automatically load the most appropriate build of the library for whatever platform your application or library is targeted to.
 
