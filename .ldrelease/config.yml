@@ -18,4 +18,5 @@ documentation:
 
 branches:
   - name: master
+  - name: 2.x
   - name: 1.x

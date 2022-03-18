@@ -8,11 +8,6 @@ workflows:
   test:
     jobs:
       - build-test-linux:
-          name: .NET Core 2.1 - Linux
-          docker-image: mcr.microsoft.com/dotnet/core/sdk:2.1-focal
-          build-target-framework: netstandard2.0
-          test-target-framework: netcoreapp2.1
-      - build-test-linux:
           name: .NET Core 3.1 - Linux
           docker-image: mcr.microsoft.com/dotnet/core/sdk:3.1-focal
           build-target-framework: netstandard2.1
