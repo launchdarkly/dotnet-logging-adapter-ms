@@ -9,7 +9,7 @@ jobs:
     template:
       name: dotnet-linux
     env:
-      LD_RELEASE_TEST_TARGET_FRAMEWORK: net5.0
+      LD_RELEASE_TEST_TARGET_FRAMEWORK: net7.0
       LD_RELEASE_DOCS_TARGET_FRAMEWORK: netstandard2.1
 
 documentation:
@@ -18,5 +18,6 @@ documentation:
 
 branches:
   - name: master
+  - name: 3.x
   - name: 2.x
   - name: 1.x

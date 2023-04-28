@@ -44,8 +44,8 @@ To run all unit tests, for all targets:
 dotnet test
 ```
 
-Or, to run tests only for the .NET Standard 2.0 target (using the .NET Core 2.1 runtime):
+Or, to run tests only for the .NET Standard 2.0 target (using the .NET Core 7 runtime):
 
 ```
-dotnet test -f netcoreapp2.1
+dotnet test -f net7.0
 ```
