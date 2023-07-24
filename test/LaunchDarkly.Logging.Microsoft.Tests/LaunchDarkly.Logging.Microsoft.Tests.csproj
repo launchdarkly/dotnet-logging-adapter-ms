@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TestFramework Condition="'$(TESTFRAMEWORK)' == ''">net6.0;net7.0</TestFramework>
+		<TestFramework Condition="'$(TESTFRAMEWORK)' == ''">netcoreapp2.1;net5.0;net6.0;net7.0</TestFramework>
     <TargetFrameworks>$(TESTFRAMEWORK)</TargetFrameworks>
     <AssemblyName>LaunchDarkly.Logging.Microsoft.Tests</AssemblyName>
   </PropertyGroup>
