@@ -7,7 +7,7 @@
       SDKs which do not consider "net5.0" to be a valid target framework that can be
       referenced in a project file.
     -->
-    <BuildFrameworks Condition="'$(BUILDFRAMEWORKS)' == ''">netstandard2.0;netstandard2.1;net6.0;net7.0</BuildFrameworks>
+		<BuildFrameworks Condition="'$(BUILDFRAMEWORKS)' == ''">netstandard2.0;netstandard2.1</BuildFrameworks>
     <TargetFrameworks>$(BUILDFRAMEWORKS)</TargetFrameworks>
 
     <DebugType>portable</DebugType>
@@ -29,7 +29,7 @@
 
   <ItemGroup>
     <PackageReference Include="LaunchDarkly.Logging" Version="[1.0.1,]" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="[6.0.0,]" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="[6.0.0,9.0.0]" />
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
