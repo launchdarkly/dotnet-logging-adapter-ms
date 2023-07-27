@@ -18,7 +18,7 @@ namespace LaunchDarkly.Logging
         /// framework. The <c>ILoggerFactory</c> is the main configuration object for
         /// <c>Microsoft.Extensions.Logging</c>; application code can construct it programmatically,
         /// or can obtain it by dependency injection. For more information, see
-        /// <see href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-3.1">Logging
+        /// <see href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging">Logging
         /// in .NET Core and ASP.NET Core</see>.
         /// </para>
         /// <para>
