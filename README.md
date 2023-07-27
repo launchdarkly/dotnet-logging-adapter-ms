@@ -1,7 +1,7 @@
 # LaunchDarkly Logging API for .NET - Microsoft.Extensions.Logging Adapter
 
 [![NuGet](https://img.shields.io/nuget/v/LaunchDarkly.Logging.Microsoft.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.Microsoft/)
-[![Actions Status](https://circleci.com/gh/launchdarkly/dotnet-logging-adapter-ms.svg?style=shield)](https://github.com/launchdarkly/dotnet-logging-adapter-ms/actions/workflows/ci.yml)
+[![Actions Status](https://github.com/launchdarkly/dotnet-logging-adapter-ms/actions/workflows/ci.yml/badge.svg)](https://github.com/launchdarkly/dotnet-logging-adapter-ms/actions/workflows/ci.yml)
 [![Documentation](https://img.shields.io/static/v1?label=GitHub+Pages&message=reference&color=00add8)](https://launchdarkly.github.io/dotnet-logging-adapter-ms)
 
 ## Overview
