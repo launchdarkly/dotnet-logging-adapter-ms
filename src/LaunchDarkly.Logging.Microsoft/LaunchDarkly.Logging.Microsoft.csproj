@@ -1,6 +1,6 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>3.0.0</Version>
+    <Version>3.1.0</Version>
     <!--
       The reason there's a mechanism here for overriding the target frameworks with
       an environment variable is that we want to be able to run CI tests using older
@@ -19,7 +19,7 @@
     <Company>LaunchDarkly</Company>
     <Authors>LaunchDarkly</Authors>
     <Owners>LaunchDarkly</Owners>
-    <Copyright>Copyright 2021 LaunchDarkly</Copyright>
+    <Copyright>Copyright 2023 LaunchDarkly</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/launchdarkly/dotnet-logging-adapter-ms</PackageProjectUrl>
     <RepositoryUrl>https://github.com/launchdarkly/dotnet-logging-adapter-ms</RepositoryUrl>
@@ -29,7 +29,7 @@
 
   <ItemGroup>
     <PackageReference Include="LaunchDarkly.Logging" Version="[1.0.1,]" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="[6.0.0,7.0.0)" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="[6.0.0,9.0.0)" />
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
