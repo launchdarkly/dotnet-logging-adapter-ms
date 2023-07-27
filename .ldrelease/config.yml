@@ -10,7 +10,6 @@ jobs:
     template:
       name: dotnet-linux
     env:
-      LD_RELEASE_TEST_TARGET_FRAMEWORK: net6.0
       TESTFRAMEWORK: net6.0
       LD_RELEASE_DOCS_TARGET_FRAMEWORK: netstandard2.1
 
