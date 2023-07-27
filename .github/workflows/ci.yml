@@ -1,0 +1,31 @@
+name: shared/common
+
+on:
+  push:
+    branches: [main, 'feat/**']
+    paths-ignore:
+      - '**.md' #Do not need to run CI for markdown changes.
+  pull_request:
+    branches: [main, 'feat/**']
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  build-test-linux:
+    strategy:
+      matrix:
+          os: ['ubuntu-latest', 'windows-latest']
+          dotnet: [{sdk: '7.x', test-framework: 'net7.0'}, {sdk: '6.x', test-framework: 'net6.0'}]
+    runs-on: ${{ matrix.os }}
+    name: Build ${{ matrix.os }} - ${{ matrix.dotnet.sdk }} - ${{ matrix.dotnet.test-framework }}
+    env:
+      BUILDFRAMEWORKS: netstandard2.1
+      TESTFRAMEWORK: ${{ matrix.dotnet.test-framework }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet.sdk }}
+      - run: dotnet restore src/LaunchDarkly.Logging.Microsoft
+      - run: dotnet build src/LaunchDarkly.Logging.Microsoft
+      - run: dotnet test test/LaunchDarkly.Logging.Microsoft.Tests
