@@ -5,11 +5,12 @@ publications:
     description: NuGet
 
 jobs:
-  - docker: {}
+  - docker:
+      image: mcr.microsoft.com/dotnet/sdk:7.0
     template:
       name: dotnet-linux
     env:
-      LD_RELEASE_TEST_TARGET_FRAMEWORK: net5.0
+      LD_RELEASE_TEST_TARGET_FRAMEWORK: net7.0
       LD_RELEASE_DOCS_TARGET_FRAMEWORK: netstandard2.1
 
 documentation:
