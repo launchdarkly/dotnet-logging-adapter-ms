@@ -6,7 +6,7 @@ publications:
 
 jobs:
   - docker:
-      image: mcr.microsoft.com/dotnet/sdk:7.0
+      image: ldcircleci/dotnet6-release:1
     template:
       name: dotnet-linux
     env:
