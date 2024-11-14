@@ -15,15 +15,15 @@ jobs:
     strategy:
       matrix:
           os: ['ubuntu-latest', 'windows-latest']
-          dotnet: [{sdk: '7.x', test-framework: 'net7.0'}, {sdk: '6.x', test-framework: 'net6.0'}]
+          dotnet: [{sdk: '8.x', test-framework: 'net8.0'}, {sdk: '9.x', test-framework: 'net9.0'}]
     runs-on: ${{ matrix.os }}
     name: Build ${{ matrix.os }} - ${{ matrix.dotnet.sdk }} - ${{ matrix.dotnet.test-framework }}
     env:
       BUILDFRAMEWORKS: netstandard2.1
       TESTFRAMEWORK: ${{ matrix.dotnet.test-framework }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-dotnet@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ matrix.dotnet.sdk }}
       - run: dotnet restore src/LaunchDarkly.Logging.Microsoft
