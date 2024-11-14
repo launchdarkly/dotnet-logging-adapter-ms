@@ -19,7 +19,7 @@
     <Company>LaunchDarkly</Company>
     <Authors>LaunchDarkly</Authors>
     <Owners>LaunchDarkly</Owners>
-    <Copyright>Copyright 2024 LaunchDarkly</Copyright>
+    <Copyright>Copyright 2023 LaunchDarkly</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/launchdarkly/dotnet-logging-adapter-ms</PackageProjectUrl>
     <RepositoryUrl>https://github.com/launchdarkly/dotnet-logging-adapter-ms</RepositoryUrl>
