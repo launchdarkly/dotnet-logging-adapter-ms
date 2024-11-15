@@ -9,6 +9,7 @@ on:
     branches: [main, 'feat/**']
     paths-ignore:
       - '**.md'
+  workflow_call:
 
 jobs:
   build-test-linux:
@@ -23,9 +24,7 @@ jobs:
       TESTFRAMEWORK: ${{ matrix.dotnet.test-framework }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
+      - uses: ./.github/actions/ci
         with:
-          dotnet-version: ${{ matrix.dotnet.sdk }}
-      - run: dotnet restore src/LaunchDarkly.Logging.Microsoft
-      - run: dotnet build src/LaunchDarkly.Logging.Microsoft
-      - run: dotnet test test/LaunchDarkly.Logging.Microsoft.Tests
+          sdk: ${{ matrix.dotnet.sdk }}
+          target_test_framework: ${{ matrix.dotnet.test-framework }}
