@@ -1,5 +1,0 @@
-{
-  "LaunchDarkly.Logging": "LaunchDarkly.Logging.yml",
-  "LaunchDarkly.Logging.LdMicrosoftLogging": "LaunchDarkly.Logging.LdMicrosoftLogging.yml",
-  "LaunchDarkly.Logging.LdMicrosoftLogging.Adapter(Microsoft.Extensions.Logging.ILoggerFactory)": "LaunchDarkly.Logging.LdMicrosoftLogging.yml"
-}

@@ -1,8 +1,0 @@
-### YamlMime:TableOfContent
-items:
-- uid: LaunchDarkly.Logging
-  name: LaunchDarkly.Logging
-  items:
-  - uid: LaunchDarkly.Logging.LdMicrosoftLogging
-    name: LdMicrosoftLogging
-memberLayout: SamePage
