@@ -57,3 +57,4 @@ jobs:
         uses: ./.github/actions/publish-docs
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          dry_run: ${{ inputs.dry_run }}
