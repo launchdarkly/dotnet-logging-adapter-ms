@@ -68,11 +68,14 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           dry_run: ${{ inputs.dry_run }}
 
-      - name: Provenance
-        uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v1.10.0
-        if: ${{ inputs.dry_run  == 'false' }}
+  provenance:
+    if: ${{ inputs.dry_run  == 'false' }}
+    runs-on: ubuntu-latest
+    needs: ['publish']
+    steps:
+      - uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v1.10.0
         with:
-          base64-subjects: "${{ steps.publish.outputs.hashes }}"
+          base64-subjects: "${{ needs.publish.outputs.hashes }}"
           upload-assets: true
           upload-tag-name: ${{ inputs.tag }}
           provenance-name: ${{ format('LaunchDarkly.Logging.Microsoft-{0}_provenance.intoto.jsonl', inputs.tag) }}
