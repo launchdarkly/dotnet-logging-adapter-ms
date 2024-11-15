@@ -2,6 +2,10 @@
 
 All notable changes to the project will be documented in this file. For full release notes for the projects that depend on this project, see their respective changelogs. This file describes changes only to the common code. This project adheres to [Semantic Versioning](http://semver.org).
 
+## [3.2.0] - 2024-11-13
+### Changed:
+- Extended support of `Microsoft.Logging.Extensions` to include versions 9+.
+
 ## [3.1.0] - 2023-07-27
 ### Changed:
 - Extended support of `Microsoft.Logging.Extensions` to include versions 7 and 8. (Thanks [gizmohd](https://github.com/launchdarkly/dotnet-logging-adapter-ms/pull/13) and [dantdj](https://github.com/launchdarkly/dotnet-logging-adapter-ms/pull/9)!)
