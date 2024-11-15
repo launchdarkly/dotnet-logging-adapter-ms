@@ -7,11 +7,20 @@ on:
         description: 'Is this a dry run. If so no package will be published.'
         type: boolean
         required: true
+      tag:
+        description: 'Tag for provenance. For a dry run the value does not matter.'
+        type: string
+        required: true
+
   workflow_call:
     inputs:
       dry_run:
         description: 'Is this a dry run. If so no package will be published.'
         type: boolean
+        required: true
+      tag:
+        description: 'Tag for provenance'
+        type: string
         required: true
 
 jobs:
@@ -23,18 +32,17 @@ jobs:
       pull-requests: write
 
     steps:
-      # - uses: launchdarkly/gh-actions/actions/release-secrets@release-secrets-v1.2.0
-      #   if: ${{ needs.release-please.outputs.releases_created == 'true' }}
-      #   name: Get secrets
-      #   with:
-      #     aws_assume_role: ${{ inputs.aws_role }}
-      #     ssm_parameter_pairs: '/production/common/releasing/digicert/host = DIGICERT_HOST,
-      #       /production/common/releasing/digicert/api_key = DIGICERT_API_KEY,
-      #       /production/common/releasing/digicert/client_cert_file_b64 = DIGICERT_CLIENT_CERT_FILE_B64,
-      #       /production/common/releasing/digicert/client_cert_password = DIGICERT_CLIENT_CERT_PASSWORD,
-      #       /production/common/releasing/digicert/code_signing_cert_sha1_hash = DIGICERT_CODE_SIGNING_CERT_SHA1_HASH,
-      #       /production/common/releasing/nuget/api_key = NUGET_API_KEY'
-      #     s3_path_pairs: 'launchdarkly-releaser/dotnet/LaunchDarkly.snk = LaunchDarkly.snk'
+      - uses: launchdarkly/gh-actions/actions/release-secrets@release-secrets-v1.2.0
+        name: Get secrets
+        with:
+          aws_assume_role: ${{ vars.AWS_ROLE_ARN }}
+          ssm_parameter_pairs: '/production/common/releasing/digicert/host = DIGICERT_HOST,
+            /production/common/releasing/digicert/api_key = DIGICERT_API_KEY,
+            /production/common/releasing/digicert/client_cert_file_b64 = DIGICERT_CLIENT_CERT_FILE_B64,
+            /production/common/releasing/digicert/client_cert_password = DIGICERT_CLIENT_CERT_PASSWORD,
+            /production/common/releasing/digicert/code_signing_cert_sha1_hash = DIGICERT_CODE_SIGNING_CERT_SHA1_HASH,
+            /production/common/releasing/nuget/api_key = NUGET_API_KEY'
+          s3_path_pairs: 'launchdarkly-releaser/dotnet/LaunchDarkly.snk = LaunchDarkly.snk'
 
       - name: Build Release
         uses: ./.github/actions/build-release
@@ -49,6 +57,7 @@ jobs:
           dll_name: LaunchDarkly.Logging.Microsoft.dll
 
       - name: Publish Nupkg
+        id: publish
         uses: ./.github/actions/publish
         with:
           dry_run: ${{ inputs.dry_run }}
@@ -58,3 +67,12 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           dry_run: ${{ inputs.dry_run }}
+
+      - name: Provenance
+        uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v1.10.0
+        if: ${{ inputs.dry_run  == 'false' }}
+        with:
+          base64-subjects: "${{ steps.publish.outputs.hashes }}"
+          upload-assets: true
+          upload-tag-name: ${{ inputs.tag }}
+          provenance-name: ${{ format('LaunchDarkly.Logging.Microsoft-{0}_provenance.intoto.jsonl', inputs.tag) }}
