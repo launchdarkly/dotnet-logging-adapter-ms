@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: LaunchDarkly.Logging
+  commentId: N:LaunchDarkly.Logging
+  id: LaunchDarkly.Logging
+  children:
+  - LaunchDarkly.Logging.LdMicrosoftLogging
+  langs:
+  - csharp
+  - vb
+  name: LaunchDarkly.Logging
+  nameWithType: LaunchDarkly.Logging
+  fullName: LaunchDarkly.Logging
+  type: Namespace
+  assemblies:
+  - LaunchDarkly.Logging.Microsoft
+references:
+- uid: LaunchDarkly.Logging.LdMicrosoftLogging
+  commentId: T:LaunchDarkly.Logging.LdMicrosoftLogging
+  href: LaunchDarkly.Logging.LdMicrosoftLogging.html
+  name: LdMicrosoftLogging
+  nameWithType: LdMicrosoftLogging
+  fullName: LaunchDarkly.Logging.LdMicrosoftLogging
