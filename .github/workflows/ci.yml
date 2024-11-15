@@ -24,7 +24,7 @@ jobs:
       TESTFRAMEWORK: ${{ matrix.dotnet.test-framework }}
     steps:
       - uses: actions/checkout@v4
-      - uses: ./github/actions/ci
+      - uses: ./.github/actions/ci
         with:
           sdk: ${{ matrix.dotnet.sdk }}
           target_test_framework: ${{ matrix.dotnet.test-framework }}
