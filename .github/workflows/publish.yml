@@ -69,6 +69,10 @@ jobs:
           dry_run: ${{ inputs.dry_run }}
 
   provenance:
+    permissions:
+      actions: read
+      id-token: write
+      contents: write
     if: ${{ inputs.dry_run  == 'false' }}
     needs: ['publish']
     uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v1.10.0
