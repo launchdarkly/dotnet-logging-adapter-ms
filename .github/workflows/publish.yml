@@ -44,6 +44,8 @@ jobs:
             /production/common/releasing/nuget/api_key = NUGET_API_KEY'
           s3_path_pairs: 'launchdarkly-releaser/dotnet/LaunchDarkly.snk = LaunchDarkly.snk'
 
+      - uses: actions/checkout@v4
+
       - name: Build Release
         uses: ./.github/actions/build-release
 
