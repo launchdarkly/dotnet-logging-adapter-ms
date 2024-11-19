@@ -7,6 +7,9 @@ on:
 
 jobs:
   release-please:
+    outputs:
+      releases_created: ${{ steps.release.outputs.releases_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
     runs-on: ubuntu-latest
     permissions:
       id-token: write # Needed if using OIDC to get release secrets.
@@ -14,7 +17,7 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: google-github-actions/release-please-action@v4
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
           command: manifest
