@@ -32,6 +32,8 @@ jobs:
       pull-requests: write
 
     steps:
+      - uses: actions/checkout@v4
+
       - uses: launchdarkly/gh-actions/actions/release-secrets@release-secrets-v1.2.0
         name: Get secrets
         with:
@@ -44,7 +46,6 @@ jobs:
             /production/common/releasing/nuget/api_key = NUGET_API_KEY'
           s3_path_pairs: 'launchdarkly-releaser/dotnet/LaunchDarkly.Logging.snk = LaunchDarkly.Logging.snk'
 
-      - uses: actions/checkout@v4
 
       - name: Build Release
         uses: ./.github/actions/release-build
