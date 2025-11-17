@@ -4,7 +4,6 @@ All notable changes to the project will be documented in this file. For full rel
 
 ## [3.2.0](https://github.com/launchdarkly/dotnet-logging-adapter-ms/compare/3.1.0...v3.2.0) (2024-11-19)
 
-
 ### Features
 
 * Update to support Microsoft.Logging.Extensions from .Net 9. ([#20](https://github.com/launchdarkly/dotnet-logging-adapter-ms/issues/20)) ([8631c9e](https://github.com/launchdarkly/dotnet-logging-adapter-ms/commit/8631c9e48461624907b8f385292fef7e43619b48))

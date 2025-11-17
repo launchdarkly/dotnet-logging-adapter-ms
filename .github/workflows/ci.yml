@@ -15,8 +15,16 @@ jobs:
   build-test-linux:
     strategy:
       matrix:
-          os: ['ubuntu-latest', 'windows-latest']
-          dotnet: [{sdk: '8.x', test-framework: 'net8.0'}, {sdk: '9.x', test-framework: 'net9.0'}]
+        os:
+          - ubuntu-latest
+          - windows-latest
+        dotnet:
+          - sdk: '8.x'
+            test-framework: 'net8.0'
+          - sdk: '9.x'
+            test-framework: 'net9.0'
+          - sdk: '10.x'
+            test-framework: 'net10.0'
     runs-on: ${{ matrix.os }}
     name: Build ${{ matrix.os }} - ${{ matrix.dotnet.sdk }} - ${{ matrix.dotnet.test-framework }}
     env:
