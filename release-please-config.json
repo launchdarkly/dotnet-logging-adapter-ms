@@ -2,7 +2,6 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "force-tag-creation": true,
       "bootstrap-sha": "676c5a4b3763706c669c43117db19af8c5aeb80c",
       "extra-files": [
         "src/LaunchDarkly.Logging.Microsoft/LaunchDarkly.Logging.Microsoft.csproj"
