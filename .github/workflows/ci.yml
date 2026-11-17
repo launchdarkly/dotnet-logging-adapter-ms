@@ -31,7 +31,7 @@ jobs:
       BUILDFRAMEWORKS: netstandard2.1
       TESTFRAMEWORK: ${{ matrix.dotnet.test-framework }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: ./.github/actions/ci
         with:
           sdk: ${{ matrix.dotnet.sdk }}
