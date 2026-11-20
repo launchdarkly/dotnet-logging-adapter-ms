@@ -17,6 +17,8 @@ The 3.x version of the package, which references `Microsoft.Extensions.Logging` 
 * .NET Standard 2.1: runs in .NET Core 3.1 and above, or in .NET 5.0 and above, or in library code that is targeted to .NET Standard 2.1 and above.
 * .NET Standard 2.0: runs in .NET Framework 4.6.1 and above, or in library code that is targeted to .NET Standard 2.0.
 
+While these are the minimum supported versions, you should use the latest patched version of a supported .NET release.
+
 The .NET build tools should automatically load the most appropriate build of the library for whatever platform your application or library is targeted to.
 
 The 2.x version of `LaunchDarkly.Logging.Microsoft` is for use with `Microsoft.Extensions.Logging` version 5.x, and is functionally identical otherwise.
