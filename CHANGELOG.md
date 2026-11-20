@@ -2,6 +2,13 @@
 
 All notable changes to the project will be documented in this file. For full release notes for the projects that depend on this project, see their respective changelogs. This file describes changes only to the common code. This project adheres to [Semantic Versioning](http://semver.org).
 
+## [3.4.0](https://github.com/launchdarkly/dotnet-logging-adapter-ms/compare/v3.3.0...v3.4.0) (2026-11-20)
+
+
+### Features
+
+* Update Microsoft.Extensions.Logging version constraint to include 11.x. ([fad3f20](https://github.com/launchdarkly/dotnet-logging-adapter-ms/commit/fad3f20d16f80991dad3bf129aede5ba5e2914eb))
+
 ## [3.3.0](https://github.com/launchdarkly/dotnet-logging-adapter-ms/compare/v3.2.0...v3.3.0) (2025-11-17)
 
 
